@@ -1,5 +1,5 @@
 <template>
-  <div class="border-b-2 ">
+  <div class="border-b-2 border-emerald-500 ">
     <div class="text-2xl font-bold">
       <h1> Titulo tarea</h1>
     </div>
