@@ -1,29 +1,14 @@
-
 <template>
-  <div class="bg-teal-950 flex flex-col justify-center h-30 p-2">
-    <div class="w-20">
-      <NuxtImg src="task.svg"/>
-    </div>
-    <div class="flex gap-6 justify-center">
-      <inputs/>
-    </div>
-    <div class="flex gap-6">
-      <buttons
-        button-img="delete.svg"
-      />
-      <buttons
-          button-img="edit.svg"
-      />
-      <buttons
-          button-img="add.svg"
-      />
+  <div class="bg-teal-950 flex h-screen w-screen items-center justify-center  ">
+    <div class=" max-w-[800px] w-full shadow-lg flex flex-col   ">
+      <div class="flex flex-col p-2 gap-2 bg-emerald-200 border-4 border-white rounded "> <!-- Contenedor tareas-->
+        <task/>
+      </div>
     </div>
   </div>
 </template>
 
-
-
-<script lang="ts">
+<script>
 import {defineComponent} from 'vue'
 
 export default defineComponent({
