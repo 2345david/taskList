@@ -1,10 +1,11 @@
 <template>
   <label class="text-white w-full">{{ textList }}</label>
-  <input type="text" placeholder="Inserte titulo" class="border border-2 border-emerald-200 bg-emerald-200 outline-none focus-within:border-lime-600 rounded-lg">
-  <label class="text-white w-full">{{ textFecha }}</label>
-  <input type="text" placeholder="Inserte fecha" class="border border-2 border-emerald-200 bg-emerald-200 outline-none focus-within:border-lime-600 rounded-lg" />
-  <label class="text-white w-full">{{ textTarea }}</label>
-  <textarea placeholder="Inserte texto" class="border border-2 border-emerald-200 bg-emerald-200 outline-none focus-within:border-lime-600 rounded-lg h-40"/>
+  <input
+      :value="modelValue"
+      :placeholder="textPlaceholder"
+      :type="typeInput"
+      @input="$emit('update:modelValue', $event.target.value)"
+      class="border border-4 border-emerald-200 bg-emerald-200 outline-none focus-within:border-emerald-500 rounded-lg ">
 </template>
 
 <script>
@@ -14,14 +15,18 @@ export default {
     textList:{
       type: String,
       default: ""
-      },
-    textTarea:{
+    },
+    typeInput:{
+      type: String,
+      default: "text"
+    },
+    modelValue:{
       type: String,
       default: ""
     },
-    textFecha:{
+    textPlaceholder:{
       type: String,
-      default: "",
+      default: ""
     }
   },
 }
