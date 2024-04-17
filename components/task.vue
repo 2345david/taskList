@@ -1,19 +1,28 @@
 <template>
-  <div class="border-b-2 border-black flex flex-col gap-2 p-2">
-    <div>
-      <h1 class="text-2xl"><strong>Titulo tarea</strong></h1>
+  <div class="border-b-2 ">
+    <div class="text-2xl font-bold">
+      <h1> Titulo tarea</h1>
     </div>
 
     <div>
-      <h3>Descripcion de la tarea</h3>
+      Descripcion de la tarea Descripcion de la tarea Descripcion de la tarea Descripcion de la tarea Descripcion de la
+      tarea Descripcion de la tarea Descripcion de la tarea Descripcion de la tarea Descripcion de la tarea Descripcion
+      de la tarea Descripcion de la tarea Descripcion de la tarea Descripcion de la tarea Descripcion de la tarea
+      Descripcion de la tarea Descripcion de la tarea Descripcion de la tarea Descripcion de la tarea Descripcion de la
+      tarea Descripcion de la tarea Descripcion de la tarea Descripcion de la tarea Descripcion de la tarea Descripcion
+      de la tarea Descripcion de la tarea Descripcion de la tarea Descripcion de la tarea
     </div>
-    <div class="flex flex-row gap-2 ">
-      <buttons
-          button-img="delete.svg"
-      />
-      <buttons
-          button-img="edit.svg"
-      />
+    <div class="flex flex-row items-center justify-between gap-2  pb-2">
+      <div class="text-lg italic " >17/05/2024 </div>
+      <div class="flex flex-row gap-2">
+        <buttons
+            button-img="add.svg"
+        />
+        <buttons
+            button-img="delete.svg"
+        />
+      </div>
+
     </div>
   </div>
 
