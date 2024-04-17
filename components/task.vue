@@ -15,9 +15,11 @@
     <div class="flex flex-row items-center justify-between gap-2  pb-2">
       <div class="text-lg italic " >17/05/2024 </div>
       <div class="flex flex-row gap-2">
-        <buttons
-            button-img="add.svg"
-        />
+        <NuxtLink to="editTask">
+          <buttons
+            button-img="edit.svg"
+          />
+        </NuxtLink>
         <buttons
             button-img="delete.svg"
         />
