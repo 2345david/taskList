@@ -4,6 +4,7 @@
       <inputs
         text-list="Titulo de la tarea"
         text-tarea="Descripcion"
+        text-fecha="Fecha"
       />
     </div>
     <div class="flex flex-row justify-between gap-6">
