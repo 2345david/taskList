@@ -5,8 +5,6 @@
           class="flex flex-col p-2 gap-2 bg-emerald-200 border-4 border-white rounded overflow-y-scroll scrollbar max-h-[500px] min-h-[500px]">
         <!-- Contenedor tareas-->
         <task/>
-        <task/>
-        <task/>
       </div>
     </div>
 
