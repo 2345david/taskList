@@ -39,7 +39,6 @@ import createTask from '../composables/addArrayContent.js'
 export default {
   name: 'addTask',
   data: () => ({
-    tasks: [],
     title: "",
     description: "",
     date: "",

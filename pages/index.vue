@@ -7,8 +7,19 @@
         />
       </NuxtLink>
       <div
-          class="flex flex-col p-2 gap-2 bg-emerald-200 border-4 border-emerald-500 rounded overflow-y-scroll scrollbar max-h-[500px] min-h-[500px]">
-        <task/>
+          class="flex flex-col p-2 gap-2 bg-emerald-200 border-4 border-emerald-500 rounded overflow-y-scroll scrollbar  max-h-[500px] min-h-[500px]">
+
+
+        <task
+            v-for="task in tasks"
+            :key="task.id"
+            :title="task.title"
+            :date="task.date"
+            :description="task.description"
+            :id="task.id"
+
+
+        />
       </div>
     </div>
   </div>
@@ -16,12 +27,19 @@
 
 <script>
 import {defineComponent} from 'vue'
-import firstTry from '../composables/learningComposables.js'
+import createTask from '../composables/addArrayContent.js'
 
 export default defineComponent({
   name: "index",
+  data: () => ({
+    tasks: [],
+    title: "",
+    description: "",
+    date: "",
+  }),
   methods: {
-    firstTry,
+    createTask
+
   },
 
 })
@@ -44,3 +62,4 @@ export default defineComponent({
   }
 }
 </style>
+

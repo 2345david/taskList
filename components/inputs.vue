@@ -11,20 +11,20 @@
 <script>
 export default {
   name: 'inputs',
-  props:{
-    textList:{
+  props: {
+    textList: {
       type: String,
       default: ""
     },
-    typeInput:{
+    typeInput: {
       type: String,
       default: "text"
     },
-    modelValue:{
+    modelValue: {
       type: String,
       default: ""
     },
-    textPlaceholder:{
+    textPlaceholder: {
       type: String,
       default: ""
     }
