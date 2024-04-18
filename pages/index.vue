@@ -1,12 +1,13 @@
 <template>
   <div class="bg-teal-950 flex h-screen w-screen items-center justify-center overflow-hidden ">
     <div class=" max-w-[800px] w-full shadow-lg flex flex-col items-end gap-4">
-        <NuxtLink to="addTask">
-          <buttons
-              button-img="add.svg"
-          />
-        </NuxtLink>
-      <div class="flex flex-col p-2 gap-2 bg-emerald-200 border-4 border-emerald-500 rounded overflow-y-scroll scrollbar max-h-[500px] min-h-[500px]">
+      <NuxtLink to="addTask">
+        <buttons
+            button-img="add.svg"
+        />
+      </NuxtLink>
+      <div
+          class="flex flex-col p-2 gap-2 bg-emerald-200 border-4 border-emerald-500 rounded overflow-y-scroll scrollbar max-h-[500px] min-h-[500px]">
         <task/>
       </div>
     </div>
@@ -15,9 +16,14 @@
 
 <script>
 import {defineComponent} from 'vue'
+import firstTry from '../composables/learningComposables.js'
 
 export default defineComponent({
-  name: "index"
+  name: "index",
+  methods: {
+    firstTry,
+  },
+
 })
 </script>
 <style scoped lang="scss">
@@ -31,7 +37,7 @@ export default defineComponent({
   }
 
   &::-webkit-scrollbar-thumb {
-    background-color: #c7cbce;
+    background-color: rgba(255, 255, 255, 0);
     border-radius: 10px;
     border: 0 solid transparent;
     cursor: pointer;
