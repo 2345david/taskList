@@ -1,10 +1,10 @@
 <template>
   <div class="bg-teal-950 h-screen flex flex-col gap-4 justify-center items-center">
-    <div class="flex flex-col max-w-[500px] w-full gap-2 ">
+    <div class="flex flex-col max-w-[500px] w-full gap-2">
       <inputs
-        text-list="Titulo de la tarea"
-        text-tarea="Descripcion"
-        text-fecha="Fecha"
+          text-list="Titulo de la tarea"
+          text-tarea="Descripcion"
+          text-fecha="Fecha"
       />
     </div>
     <div class="flex flex-row justify-between gap-6">
@@ -20,16 +20,10 @@
         />
       </NuxtLink>
     </div>
-
-
   </div>
-
-
 </template>
-
 <script>
-export default{
-  name: 'addTask',
-
+export default {
+  name: 'addTask'
 }
 </script>

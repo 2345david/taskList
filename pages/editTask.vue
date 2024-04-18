@@ -20,11 +20,10 @@
         />
       </NuxtLink>
     </div>
-
-
   </div>
-
-
 </template>
-<script setup lang="ts">
+<script>
+export default {
+  name: 'editTask'
+}
 </script>
