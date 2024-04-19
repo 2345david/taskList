@@ -7,7 +7,7 @@
         />
       </NuxtLink>
       <div
-          class="flex flex-col p-2 gap-2 bg-emerald-200 border-4 border-emerald-500 rounded overflow-y-scroll scrollbar min-w-[800px]  max-h-[500px] min-h-[500px]">
+          class="flex flex-col p-2 gap-2 bg-emerald-200 border-4 border-emerald-500 rounded overflow-y-scroll scrollbar min-w-[800px] max-w-[800px] max-h-[500px] min-h-[500px]">
 
 
         <taskItem

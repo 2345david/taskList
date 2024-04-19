@@ -24,7 +24,7 @@
         />
       </NuxtLink>
 
-      <NuxtLink to="" class="w-fit h-fit">
+      <NuxtLink to="/" class="w-fit h-fit">
         <buttons
             @click="createTask(title, description, date)"
             button-img="save.svg"
