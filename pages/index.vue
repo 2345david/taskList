@@ -1,13 +1,21 @@
 <template>
   <div class="bg-teal-950 flex h-screen w-screen items-center justify-center overflow-hidden ">
     <div class=" max-w-[800px] w-full shadow-lg flex flex-col items-end gap-4">
-        <NuxtLink to="addTask">
+        <NuxtLink to="/addTask">
           <buttons
               button-img="add.svg"
           />
         </NuxtLink>
-      <div class="flex flex-col p-2 gap-2 bg-emerald-200 border-4 border-emerald-500 rounded overflow-y-scroll scrollbar max-h-[500px] min-h-[500px]">
-        <task/>
+      <div class="min-w-[800px] flex flex-col p-2 gap-2 bg-emerald-200 border-4 border-emerald-500 rounded overflow-y-scroll scrollbar max-h-[500px] min-h-[500px]">
+        <taskItems
+            v-for="task in tasks"
+            :title="task.title"
+            :date="task.date"
+            :description="task.description"
+            :id="task.id"
+            :key="task.id"
+
+        />
       </div>
     </div>
   </div>
@@ -15,9 +23,12 @@
 
 <script>
 import {defineComponent} from 'vue'
-
+import createTask from "../composables/showTask.js";
 export default defineComponent({
-  name: "index"
+  name: "index",
+  methods:{
+    createTask,
+  },
 })
 </script>
 <style scoped lang="scss">

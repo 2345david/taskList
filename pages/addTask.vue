@@ -26,9 +26,9 @@
         />
       </NuxtLink>
 
-      <NuxtLink to="" class="w-fit h-fit">
+      <NuxtLink to="/" class="w-fit h-fit">
         <buttons
-            @click="createTask(title, description, date)"
+            @click="createTask(title, date, description)"
             button-img="save.svg"
         />
       </NuxtLink>
@@ -41,27 +41,16 @@
 </template>
 
 <script>
+import createTask from "../composables/showTask.js";
 export default {
   name: 'addTask',
   data:() => ({
-    tasks: [],
     title:"",
     description:"",
     date:"",
   }),
   methods: {
-    createTask(title, description, date){
-      let id = Math.floor(Math.random() * 100000000);
-      let task = {
-        title: title,
-        date: date,
-        description: description,
-        id: id
-      }
-     this.tasks.push(task)
-      console.log(this.tasks)
-    }
-  }
-
+      createTask,
+  },
 }
 </script>
