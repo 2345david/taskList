@@ -7,10 +7,10 @@
         />
       </NuxtLink>
       <div
-          class="flex flex-col p-2 gap-2 bg-emerald-200 border-4 border-emerald-500 rounded overflow-y-scroll scrollbar  max-h-[500px] min-h-[500px]">
+          class="flex flex-col p-2 gap-2 bg-emerald-200 border-4 border-emerald-500 rounded overflow-y-scroll scrollbar min-w-[800px]  max-h-[500px] min-h-[500px]">
 
 
-        <task
+        <taskItem
             v-for="task in tasks"
             :key="task.id"
             :title="task.title"
@@ -26,23 +26,17 @@
 </template>
 
 <script>
-import {defineComponent} from 'vue'
-import createTask from '../composables/addArrayContent.js'
 
-export default defineComponent({
+import createTask from '../composables/addArrayContent.js'
+export default {
   name: "index",
-  data: () => ({
-    tasks: [],
-    title: "",
-    description: "",
-    date: "",
-  }),
   methods: {
     createTask
 
   },
 
-})
+
+}
 </script>
 <style scoped lang="scss">
 .scrollbar {
