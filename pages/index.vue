@@ -9,11 +9,11 @@
       <div class="min-w-[800px] flex flex-col p-2 gap-2 bg-emerald-200 border-4 border-emerald-500 rounded overflow-y-scroll scrollbar max-h-[500px] min-h-[500px]">
         <taskItems
             v-for="task in tasks"
+            :key="task.id"
             :title="task.title"
             :date="task.date"
             :description="task.description"
             :id="task.id"
-            :key="task.id"
 
         />
       </div>

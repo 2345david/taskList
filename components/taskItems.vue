@@ -28,13 +28,13 @@
 
 <script>
 import {defineComponent} from 'vue'
-import deleteTask from "~/composables/deleteArryComponent.js";
+import deleteTask from "../composables/deleteArryComponent.js";
 export default defineComponent({
   name: "task",
   props:{
     id:{
       type: Number,
-      required: true
+      required: true,
     },
     title:{
       type: String,
