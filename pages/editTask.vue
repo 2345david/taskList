@@ -35,7 +35,7 @@
 </template>
 <script>
 
-import editTask from '../composables/aditArrayContent.js'
+import editTask from '../composables/editArrayContent.js'
 
 export default {
   name: 'editTask',

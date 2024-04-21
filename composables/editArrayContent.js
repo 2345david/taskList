@@ -1,10 +1,11 @@
+let selectTask = {}
 function editTask(id) {
-    let position = tasks.findIndex((x) => x.id === id)
-    this.selectContact = tasks[position]
+    let position = this.task.findIndex((x) => x.id === id)
+    selectTask = this.task[position]
     return {
+        selectTask,
         editTask
 
     }
 }
-
 export default editTask;
