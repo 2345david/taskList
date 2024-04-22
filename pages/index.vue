@@ -27,8 +27,20 @@ import createTask from "../composables/showTask.js";
 export default defineComponent({
   name: "index",
   methods:{
-    createTask,
+    createTask
   },
+  mounted(){
+    let text = localStorage.getItem("tasks")
+    let arr = JSON.parse(text)
+    if (!arr){
+      arr = []
+    }
+    console.log(arr)
+    return ({
+      tasks: arr ,
+      selectTask: {}
+    });
+  }
 })
 </script>
 <style scoped lang="scss">

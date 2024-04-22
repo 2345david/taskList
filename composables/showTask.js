@@ -1,14 +1,16 @@
 function createTask(title, description, date) {
 
     let id = Math.floor(Math.random() * 100000000);
-    let task = {
+    let task = ref({
         title: title,
         date: date,
         description: description,
         id: id
-    }
-    tasks.push(task)
+    })
+    tasks.push(task.value)
+    localStorage.setItem("tasks", JSON.stringify(tasks))
     console.log(tasks)
+
     return{
         createTask,
         tasks

@@ -31,6 +31,9 @@ import {defineComponent} from 'vue'
 import deleteTask from "../composables/deleteArryComponent.js";
 export default defineComponent({
   name: "task",
+  methods:{
+    deleteTask
+  },
   props:{
     id:{
       type: Number,
@@ -48,9 +51,6 @@ export default defineComponent({
       type: String,
       default: ""
     }
-  },
-  methods:{
-    deleteTask
   }
 })
 </script>
