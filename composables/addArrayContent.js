@@ -16,6 +16,7 @@ function createTask(title, description, date) {
 
 export default createTask;
 export const tasks = []
+export const task = []
 
 
 

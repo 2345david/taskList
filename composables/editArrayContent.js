@@ -1,11 +1,23 @@
-let selectTask = {}
+
+let selectTask = {  }
+
+
 function editTask(id) {
-    let position = this.task.findIndex((x) => x.id === id)
-    selectTask = this.task[position]
+    let position = tasks.findIndex((x) => x.id === id)
+   selectTask = tasks[position]
+    console.log(tasks)
     return {
+        position,
         selectTask,
         editTask
 
     }
+
 }
-export default editTask;
+
+
+import {tasks} from "../composables/addArrayContent.js";
+export default {
+    editTask,
+    selectTask
+}

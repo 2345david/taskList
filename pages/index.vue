@@ -17,8 +17,6 @@
             :date="task.date"
             :description="task.description"
             :id="task.id"
-
-
         />
       </div>
     </div>
@@ -28,6 +26,7 @@
 <script>
 
 import createTask from '../composables/addArrayContent.js'
+
 export default {
   name: "index",
   methods: {

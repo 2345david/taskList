@@ -26,7 +26,7 @@
 
       <NuxtLink to="/" class="w-fit h-fit">
         <buttons
-          @click ="editTask(id)"
+          @click =""
             button-img="save.svg"
         />
       </NuxtLink>
@@ -35,8 +35,7 @@
 </template>
 <script>
 
-import editTask from '../composables/editArrayContent.js'
-
+import selectTask from '../composables/editArrayContent.js'
 export default {
   name: 'editTask',
   data: () => ({
@@ -45,7 +44,7 @@ export default {
     date: "",
   }),
   methods: {
-    editTask
+
   }
 }
 
