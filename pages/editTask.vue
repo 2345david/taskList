@@ -5,16 +5,16 @@
           text-list="Titulo"
           type-input="text"
           text-placeholder="Inserte un titulo"
-          v-model="title"
+          v-model="selectTask.title"
       />
       <inputs
           text-list="Fecha"
           type-input="text"
           text-placeholder="DD/MM/YY"
-          v-model="date"
+          v-model="selectTask.date"
       />
       <textArea
-          v-model="description"
+          v-model="selectTask.description"
       />
     </div>
     <div class="flex flex-row justify-between gap-6">
@@ -34,14 +34,22 @@
 </template>
 <script>
 
+import {selectTask} from "~/composables/tasksComposables.js";
+
 export default {
   name: 'editTask',
+  computed: {
+    selectTask() {
+      return selectTask
+    }
+  },
   data: () => ({
     title: "",
     description: "",
     date: "",
   }),
   methods: {}
+
 }
 
 

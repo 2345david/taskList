@@ -10,7 +10,7 @@ function editTask(id) {
 
 }
 
-import {tasks} from "../composables/addArrayContent.js";
+import {tasks} from "../composables/tasksComposables.js";
 export let selectTask = {};
 export default {
     editTask,

@@ -14,7 +14,7 @@
           v-model="date"
       />
       <textArea
-        v-model="description"
+          v-model="description"
       />
 
 
@@ -42,15 +42,10 @@ export default {
     title: "",
     description: "",
     date: "",
-  data:() => ({
-    title:"",
-    description:"",
-    date:"",
   }),
   methods: {
     createTask
   }
+
 }
-
-
 </script>
