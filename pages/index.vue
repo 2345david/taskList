@@ -30,6 +30,7 @@ export default {
     createTask,
     deleteTask
   },
+
 }
 </script>
 <style scoped lang="scss">

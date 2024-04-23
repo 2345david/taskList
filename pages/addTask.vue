@@ -9,7 +9,7 @@
       />
       <inputs
           text-list="Fecha"
-          type-input="text"
+          type-input="date"
           text-placeholder="DD/MM/YY"
           v-model="date"
       />
@@ -26,12 +26,18 @@
         />
       </NuxtLink>
 
-      <NuxtLink to="/" class="w-fit h-fit">
+      <NuxtLink v-if="isClickable" to="/" class="w-fit h-fit">
         <buttons
             @click="createTask(title, description, date)"
             button-img="save.svg"
         />
       </NuxtLink>
+      <buttons
+          v-else
+          @click="createTask(title, description, date)"
+          button-img="save.svg"
+          disable
+      />
     </div>
   </div>
 </template>
@@ -45,7 +51,15 @@ export default {
   }),
   methods: {
     createTask
-  }
+  },
+  computed: {
+    isClickable() {
+      if (this.title != "" && this.date != "" && this.description != "") {
+        return true
+      }
+      return false
+    }
+  },
 
 }
 </script>

@@ -12,7 +12,8 @@ export default {
     props:{
       buttonImg:{
         type: String,
-        default: ""
+        default: "",
+        required: false
       }
     },
   }
