@@ -27,11 +27,9 @@
 export default {
   name: "index",
   methods: {
-    createTask
+    createTask,
+    deleteTask
   },
-  mounted(){
-
-  }
 }
 </script>
 <style scoped lang="scss">

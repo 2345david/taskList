@@ -19,23 +19,20 @@ export function createTask(title, description, date) {
     }
 }
 
-export function deleteTask(id) {
-    const position = ref(tasks.findIndex((x) => x.id === id))
-    tasks.splice(position.value, 1)
-
-    localStorage.setItem("tasks", JSON.stringify(tasks))
-    console.log(tasks)
-    return {
-        deleteTask,
-        position
-    }
-}
-
 export function modifyTask(id) {
     let position = tasks.findIndex((x) => x.id === id)
     selectTask = tasks[position]
     return {
         modifyTask,
         selectTask
+    }
+}
+export function deleteTask(id) {
+    let position = ref(tasks.findIndex((x) => x.id === id))
+    tasks.splice(position.value, 1)
+    localStorage.setItem("tasks", JSON.stringify(tasks))
+    console.log(tasks)
+    return{
+        deleteTask,
     }
 }
