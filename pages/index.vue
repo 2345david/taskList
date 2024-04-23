@@ -23,23 +23,11 @@
 
 <script>
 import {defineComponent} from 'vue'
-import createTask from "../composables/showTask.js";
 export default defineComponent({
   name: "index",
   methods:{
-    createTask
-  },
-  mounted(){
-    let text = localStorage.getItem("tasks")
-    let arr = JSON.parse(text)
-    if (!arr){
-      arr = []
-    }
-    console.log(arr)
-    return ({
-      tasks: arr ,
-      selectTask: {}
-    });
+    createTask,
+    tasks
   }
 })
 </script>

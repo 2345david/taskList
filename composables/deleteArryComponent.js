@@ -1,4 +1,4 @@
-function deleteTask(id){
+export function deleteTask(id){
     const position = ref(tasks.findIndex((x)=> x.id === id))
     tasks.splice(position.value,1)
 
@@ -9,5 +9,3 @@ function deleteTask(id){
         position
     }
 }
-export default deleteTask
-import {tasks} from "../composables/showTask.js";
