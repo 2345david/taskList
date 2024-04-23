@@ -1,4 +1,4 @@
-
+/*
 function editTask(id) {
     let position = tasks.findIndex((x) => x.id === id)
     selectTask = tasks[position]
@@ -15,3 +15,4 @@ export let selectTask = {};
 export default {
     editTask,
 }
+ */

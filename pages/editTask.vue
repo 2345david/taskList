@@ -5,16 +5,16 @@
           text-list="Titulo"
           type-input="text"
           text-placeholder="Inserte un titulo"
-          v-model="selectTask.title"
+          v-model="title"
       />
       <inputs
           text-list="Fecha"
           type-input="text"
           text-placeholder="DD/MM/YY"
-          v-model="selectTask.date"
+          v-model="date"
       />
       <textArea
-          v-model="selectTask.description"
+          v-model="description"
       />
     </div>
     <div class="flex flex-row justify-between gap-6">
@@ -26,7 +26,6 @@
 
       <NuxtLink to="/" class="w-fit h-fit">
         <buttons
-            @click="console.log(tasks,selectTask)"
             button-img="save.svg"
         />
       </NuxtLink>
@@ -35,8 +34,6 @@
 </template>
 <script>
 
-import selectTask from '../composables/editArrayContent.js'
-import editTask from '../composables/editArrayContent.js'
 export default {
   name: 'editTask',
   data: () => ({
@@ -44,11 +41,7 @@ export default {
     description: "",
     date: "",
   }),
-  mounted(){
-  },
-  methods: {
-    editTask
-  }
+  methods: {}
 }
 
 

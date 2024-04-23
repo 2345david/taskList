@@ -24,14 +24,11 @@
 </template>
 
 <script>
-
-import createTask from '../composables/addArrayContent.js'
-
 export default {
   name: "index",
   methods: {
-    createTask
-
+    createTask,
+    tasks
   },
 
 

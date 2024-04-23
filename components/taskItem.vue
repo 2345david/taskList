@@ -17,7 +17,7 @@
           />
         </NuxtLink>
         <buttons
-            @click="editTask(id)"
+            @click=""
             button-img="delete.svg"
         />
       </div>
@@ -28,12 +28,11 @@
 
 <script>
 import {defineComponent} from 'vue'
-import editTask from '../composables/editArrayContent.js'
 
 export default defineComponent({
   name: "taskItem",
   methods: {
-    editTask
+
   },
   props: {
     id: {
