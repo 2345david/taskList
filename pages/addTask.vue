@@ -14,8 +14,10 @@
           v-model="date"
       />
       <textArea
-          v-model="description"
+        v-model="description"
       />
+
+
     </div>
     <div class="flex flex-row justify-between gap-6">
       <NuxtLink to="/" class="w-fit h-fit">
@@ -34,14 +36,16 @@
   </div>
 </template>
 <script>
-
-
 export default {
   name: 'addTask',
   data: () => ({
     title: "",
     description: "",
     date: "",
+  data:() => ({
+    title:"",
+    description:"",
+    date:"",
   }),
   methods: {
     createTask

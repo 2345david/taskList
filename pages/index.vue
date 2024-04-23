@@ -24,15 +24,14 @@
 </template>
 
 <script>
-export default {
+import {defineComponent} from 'vue'
+export default defineComponent({
   name: "index",
-  methods: {
+  methods:{
     createTask,
     tasks
-  },
-
-
-}
+  }
+})
 </script>
 <style scoped lang="scss">
 .scrollbar {
@@ -52,4 +51,3 @@ export default {
   }
 }
 </style>
-
