@@ -27,8 +27,7 @@
 </template>
 
 <script>
-import {defineComponent} from 'vue'
-export default defineComponent({
+export default{
   name: "task",
   methods:{
     deleteTask
@@ -51,5 +50,5 @@ export default defineComponent({
       default: ""
     }
   }
-})
+}
 </script>
